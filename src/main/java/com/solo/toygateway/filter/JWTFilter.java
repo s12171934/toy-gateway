@@ -6,6 +6,7 @@ import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
+import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
@@ -13,10 +14,12 @@ import reactor.core.publisher.Mono;
 public class JWTFilter implements GlobalFilter {
 
     private final JWTUtil jwtUtil;
+    private final WebClient.Builder webClientBuilder;
 
-    public JWTFilter(JWTUtil jwtUtil) {
+    public JWTFilter(JWTUtil jwtUtil, WebClient.Builder webClientBuilder ) {
 
         this.jwtUtil = jwtUtil;
+        this.webClientBuilder = webClientBuilder;
     }
 
     @Override
@@ -48,6 +51,13 @@ public class JWTFilter implements GlobalFilter {
             return exchange.getResponse().setComplete();
         }
 
-        return chain.filter(exchange);
+        Mono<String> test = webClientBuilder.baseUrl("http://AUTH").defaultHeader("access", accessToken)
+                .build().get().uri("/auth/passport").retrieve().bodyToMono(String.class);
+
+        return test.flatMap(responseData -> {
+            exchange.getRequest().mutate().header("passport", responseData);
+
+            return chain.filter(exchange);
+        });
     }
 }
