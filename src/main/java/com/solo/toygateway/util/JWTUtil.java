@@ -37,32 +37,8 @@ public class JWTUtil {
         return decodeToken(token).get("category", String.class);
     }
 
-    public String getUsername(String token) {
-
-        return decodeToken(token).get("username", String.class);
-    }
-
-    public String getRole(String token) {
-
-        return decodeToken(token).get("role", String.class);
-    }
-
     public Boolean isExpired(String token) {
 
         return decodeToken(token).getExpiration().before(new Date());
     }
-
-    //JWT 생성
-    public String createJwt(String category, String username, String role, Long expiredMs) {
-
-        return Jwts.builder()
-                .claim("category", category)
-                .claim("username", username)
-                .claim("role", role)
-                .issuedAt(new Date(System.currentTimeMillis()))
-                .expiration(new Date(System.currentTimeMillis() + expiredMs))
-                .signWith(secretKey)
-                .compact();
-    }
-
 }

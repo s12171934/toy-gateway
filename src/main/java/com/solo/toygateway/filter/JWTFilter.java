@@ -51,9 +51,11 @@ public class JWTFilter implements GlobalFilter {
             return exchange.getResponse().setComplete();
         }
 
+        //passport 발급
         Mono<String> test = webClientBuilder.baseUrl("http://AUTH").defaultHeader("access", accessToken)
                 .build().get().uri("/auth/passport").retrieve().bodyToMono(String.class);
 
+        //passport를 header에 넣고 다음 필터로 이동
         return test.flatMap(responseData -> {
             exchange.getRequest().mutate().header("passport", responseData);
 

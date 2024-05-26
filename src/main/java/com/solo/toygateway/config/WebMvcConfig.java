@@ -7,6 +7,8 @@ import org.springframework.web.reactive.function.client.WebClient;
 
 @Configuration
 public class WebMvcConfig {
+
+    //eureka의 로드밸런싱을 사용하기 위해 webclient 설정
     @LoadBalanced
     @Bean
     public WebClient.Builder webClientBuilder() {
