@@ -1,4 +1,4 @@
-# MSA
+![MSA project architecture drawio](https://github.com/s12171934/toy-gateway/assets/148848550/e921ab97-0160-499f-b793-41d688e7f899)# MSA
 ### All repository is Here
 https://github.com/stars/s12171934/lists/msa-project
 
@@ -14,18 +14,21 @@ Eureka-js-clientL 4.5.0
 
 
 ## Architecture
-![MSA project architecture drawio](https://github.com/s12171934/toy-gateway/assets/148848550/2d7fce01-df04-4640-b016-b623754bddf7)
+![MSA project architecture drawio](https://github.com/s12171934/toy-gateway/assets/148848550/0b6f1f8b-303c-4d92-aeef-b1b7f3264d43)
+
 
 ## Gateway Diagram
-![gateway drawio](https://github.com/s12171934/toy-gateway/assets/148848550/ed625f63-f438-4087-b9ff-e8a50383eb94)
+![gateway drawio](https://github.com/s12171934/toy-gateway/assets/148848550/5b0cb993-e6ee-4823-b3c0-3057269d8eb9)
 
 ## Auth Service API
 
 ### Spring Security Diagram
-![Spring Security Auth Service API drawio](https://github.com/s12171934/toy-gateway/assets/148848550/b8b2b8ad-52f5-4b70-a889-d7130f4eb4e4)
+![Spring Security Auth Service API drawio](https://github.com/s12171934/toy-gateway/assets/148848550/b3101bcc-94fa-4467-9eaa-925319c8a788)
+
 
 ### OAuth2 Diagram
-![Auth Service OAuth2 drawio](https://github.com/s12171934/toy-gateway/assets/148848550/2c7b72ec-b8c7-427b-8eef-4992daa92a96)
+![Auth Service OAuth2 drawio](https://github.com/s12171934/toy-gateway/assets/148848550/a85c2209-94c0-4c40-9968-30640d196ce5)
+
 
 ### Gateway Application.yml
 ```
