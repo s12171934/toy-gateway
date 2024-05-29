@@ -1,4 +1,4 @@
-![MSA project architecture drawio](https://github.com/s12171934/toy-gateway/assets/148848550/e921ab97-0160-499f-b793-41d688e7f899)# MSA
+# MSA
 ### All repository is Here
 https://github.com/stars/s12171934/lists/msa-project
 
