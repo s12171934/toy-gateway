@@ -14,8 +14,7 @@ Eureka-js-clientL 4.5.0
 
 
 ## Architecture
-![MSA project architecture drawio](https://github.com/s12171934/toy-gateway/assets/148848550/56a95417-321a-49cf-a4c8-c021c4fed269)
-
+![MSA project architecture drawio](https://github.com/s12171934/toy-gateway/assets/148848550/8e63e37e-5bd2-4d0e-a91b-3f36ffd96c62)
 
 ## Gateway Diagram
 ![gateway drawio](https://github.com/s12171934/toy-gateway/assets/148848550/5b0cb993-e6ee-4823-b3c0-3057269d8eb9)
